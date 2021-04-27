@@ -1,0 +1,172 @@
+/*  All Screen */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+html,
+body {
+	background-color: #231F20;
+	margin: 10px;
+	font-family: "Montserrat", sans-serif;
+}
+
+.gridcontainer {
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 200px auto 200px;
+	grid-gap: 1px;
+	grid-template-areas: "h h h h h h h h h h h h" ". m m m m m m m m m m ." "f f f f f f f f f f f f";
+}
+
+
+/*  Header */
+
+.header {
+	grid-area: h;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.header h1 {
+	color: white;
+}
+
+.header h1::after {
+	background-color: #4A90E2;
+	content: "NEW";
+	font-size: 0.4em;
+	padding-left: 10px;
+	display: block;
+	height: 18px;
+	width: 50px;
+	position: absolute;
+}
+
+.header nav ul {
+	list-style-type: none;
+	font-size: 0.8em;
+	display: flex;
+	flex-flow: row wrap;
+	padding: 5px;
+	background-color: rgb(28, 46, 148);
+}
+
+.header nav ul li {
+	padding: 0px 20px 0px 25px;
+	border-left: #68a7da solid 0.5px;
+	border-right: #68a7da solid 0.5px;
+}
+
+.currentPage {
+	color: rgb(31, 30, 30);
+	text-decoration: none;
+	background-color: rgb(181, 195, 221);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.about {
+	color: white;
+	text-decoration: none;
+}
+
+.contact {
+	color: white;
+	text-decoration: none;
+}
+
+.search {
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about:hover {
+	color: rgb(31, 30, 30);
+	background-color: rgb(181, 195, 221);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.contact:hover {
+	color: rgb(31, 30, 30);
+	background-color: rgb(181, 195, 221);
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.search:focus {
+	border: #68a7da solid 2px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+/*  Main */
+
+.main {
+	grid-area: m;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 15px;
+}
+
+.main h1 {
+	color: #FFF;
+	font-family: 'Oswald';
+	font-weight: 700;
+	position: relative;
+	margin: 30px auto;
+	text-transform: uppercase;
+	width: 550px;
+}
+
+
+/* selector voor het linker halve cirkeltje, selector voor het rechter halve cirkeltje */
+
+.main h1::before,
+.main h1::after {
+	background-color: #4A90E2;
+	content: "";
+	display: inline-block;
+	height: 18px;
+	width: 15px;
+	position: absolute;
+}
+
+
+/* selector voor het linker halve cirkeltje */
+
+.main h1::before {
+	border-radius: 200px 0px 0px 200px;
+	-moz-border-radius: 200px 0px 0px 200px;
+	-webkit-border-radius: 200px 0px 0px 200px;
+	border: 0px solid #000000;
+	left: -25px;
+	top: 5px;
+}
+
+
+/* selector voor het rechter halve cirkeltje */
+
+.main h1::after {
+	border-radius: 0px 200px 200px 0px;
+	-moz-border-radius: 0px 200px 200px 0px;
+	-webkit-border-radius: 0px 200px 200px 0px;
+	border: 0px solid #000000;
+	left: 450px;
+	top: 5px;
+}
+
+
+/*  Sidebar */
+
+
+/*  Footer */
+
+.footer {
+	grid-area: f;
+}
